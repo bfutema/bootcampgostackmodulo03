@@ -20,6 +20,9 @@ routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store);
 
 routes.get('/', (req, res) => res.send('OK'));
+routes.get('/teste', (req, res) => res.json({
+  message: 'Tudo certo, sua API RESTFul está no ar!'
+}));
 
 routes.use(authMiddleware);
 
